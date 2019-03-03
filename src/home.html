@@ -1,0 +1,836 @@
+<!doctype html>
+<html class='no-js' lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Bootstrap 4 Layout</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Space+Mono|Nanum+Gothic+Coding" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+  </head>
+
+  <body style="background: #f9faf3;" class="" >
+      <nav class="navbar navbar-expand-lg alert-primary rounded fixed-top border-primary " >
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <hr style="background: #b4b4b4; size: 10;" class="m-5"/>
+
+    <div class="container-fluid m-5" style="max-width: 1400px;">
+      <div class="row mt-5">
+        <div class="col-sm-9">
+          <div class="row mb-4">
+            <div class="float-left">
+              <div class="d-flex">
+                <i class="fas fa-id-card fa-lg mt-2 mr-2" style="size:18px"></i> 
+                <h3 class="text head font-weight-bold" style="font-family: 'Nanum Gothic Coding', monospace;">Abhishek Anand</h3>
+              </div>
+              <h4 class="text sub">USN:- 1DS16CS005</h4>
+              <h4 class="text sub">6th Semester, Department of Computer Science and Engineering</h4>
+            </div>
+            
+            <h4 class="text sub text-primary ml-auto mr-0 text-monospace" style="font-size: 24px;"> CGPA:- 9</h4>
+
+            
+          </div>
+          <div class="row">
+            <div class="card text-center text rounded border-bottom-0 border-right-0 border-left-0" style="width: 100%; background: #f9faf3;">
+              <div class="card-header text sub mb-3 border-right border-left" >
+                <ul class="nav nav-pills card-header-pills">
+                  <li class="nav-item">
+                    <a class="nav-link text" href="#firstSem" data-toggle="tab" role="tab">1st Sem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text" href="#secondSem" data-toggle="tab" role="tab">2nd Sem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text" href="#thirdSem" tabindex="-1" aria-disabled="true" data-toggle="tab" role="tab">3rd Sem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text" href="#fourthSem" data-toggle="tab" role="tab">4th Sem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text" href="#fifthSem" data-toggle="tab" role="tab">5th Sem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active currentSem" data-toggle="tab" href="#sixthSem" tabindex="-1" aria-disabled="true" role="tab">6th Sem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled text-black-50" href="#seventhSem" data-toggle="tab" role="tab">7th Sem</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link disabled text-black-50" href="#eighthSem" data-toggle="tab" role="tab">8th Sem</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body p-0 m-0" style="background-image: linear-gradient(to right, #007bff, rgb(240, 114, 187));border-radius: 5px;">
+               
+            <div class="tab-content">
+              <div id="firstSem" role="tabpanel"class="tab-pane fade ">
+                  <ul class="nav nav-tabs mb-0 border-dark">
+                    <li class="nav-item">
+                      <a class="nav-link active border-dark text-white" href="#">Semester Results</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="#">Internals</a>
+                    </li>
+                  </ul>
+                <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                    <thead class="thead-dark">
+                      <tr class="table-danger border-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">Subject Code</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark 1st</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="secondSem" role="tabpanel" class="tab-pane fade">
+                    <ul class="nav nav-tabs mb-0 border-dark">
+                        <li class="nav-item">
+                          <a class="nav-link active bg-dark border-dark text-white" href="#">Semester Results</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white" href="#">Internals</a>
+                        </li>
+                      </ul>
+                  <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                    <thead class="thead-dark">
+                      <tr class="table-danger border-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">Subject Code</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark 1st</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="thirdSem" role="tabpanel" class="tab-pane fade">
+                    <ul class="nav nav-tabs mb-0 border-dark">
+                        <li class="nav-item">
+                          <a class="nav-link active bg-dark border-dark text-white" href="#">Semester Results</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white" href="#">Internals</a>
+                        </li>
+                      </ul>
+                  <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                    <thead class="thead-dark">
+                      <tr class="table-danger border-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">Subject Code</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark 1st</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="fourthSem" role="tabpanel" class="tab-pane fade">
+                    <ul class="nav nav-tabs mb-0 border-dark">
+                        <li class="nav-item">
+                          <a class="nav-link active bg-dark border-dark text-white" href="#">Semester Results</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white" href="#">Internals</a>
+                        </li>
+                      </ul>
+                  <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                    <thead class="thead-dark">
+                      <tr class="table-danger border-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">Subject Code</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark 1st</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="fifthSem" role="tabpanel" class="tab-pane fade">
+                    <ul class="nav nav-tabs mb-0 border-dark">
+                        <li class="nav-item">
+                          <a class="nav-link active border-dark text-white" href="#">Semester Results</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-white" href="#">Internals</a>
+                        </li>
+                      </ul>
+                  <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                      <thead class="thead-dark">
+                        <tr class="table-danger border-primary">
+                          <th scope="col">#</th>
+                          <th scope="col">Subject Code</th>
+                          <th scope="col">Subject</th>
+                          <th scope="col">Grade</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark 1st</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="sixthSem" role="tabpanel" class="tab-pane fade show active">
+                      <ul class="nav nav-tabs mb-0 border-0">
+                          <li class="nav-item">
+                            <a class="nav-link active text-white bg-dark border-dark rounded-0" href="#sixFinal" data-toggle="tab" role="tab">Semester Results</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark bg-light rounded-0" href="#sixInternal" data-toggle="tab" role="tab">Internals</a>
+                          </li>
+                        </ul>
+                    <div class="tab-content">
+                      <div id="sixFinal" role="tabpanel" class="tab-pane fade show active">
+                        <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                            <thead class="thead-dark">
+                              <tr class="table-danger border-primary">
+                                <th scope="col">#</th>
+                                <th scope="col">Subject Code</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Grade</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark 6th</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div id="sixInternal" role="tabpanel" class="tab-pane fade">
+                          <table class="table table-sm table-borderless table-striped mt-0 w-100 text-light text sub" style=" margin-top: 5px; color: #e0e0e0;">
+                              <thead class="thead-light">
+                                <tr class="table-danger border-primary ">
+                                  <th scope="col">Subject Code</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">IAT 1</th>
+                                  <th scope="col">IAT 2</th>
+                                  <th scope="col">IAT 3</th>
+                                  <th scope="col">Assignment</th>
+                                  <th scope="col">AAT</th>
+                                  <th scope="col">Total</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                            
+                                </tr>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Mark 1st</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Mark 1st</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                      </div>
+                    </div>
+                    <div id="seventhSem" role="tabpanel" class="tab-pane fade">
+                        <ul class="nav nav-tabs mb-0 border-dark">
+                            <li class="nav-item">
+                              <a class="nav-link active bg-dark border-dark text-white" href="#">Semester Results</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-white" href="#">Internals</a>
+                            </li>
+                          </ul>
+                      <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                          <thead class="thead-dark">
+                            <tr class="table-danger border-primary">
+                              <th scope="col">#</th>
+                              <th scope="col">Subject Code</th>
+                              <th scope="col">Subject</th>
+                              <th scope="col">Grade</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark 1st</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div id="eighthSem" role="tabpanel" class="tab-pane fade">
+                          <ul class="nav nav-tabs mb-0 border-dark">
+                              <li class="nav-item">
+                                <a class="nav-link active bg-dark border-dark text-white" href="#">Semester Results</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Internals</a>
+                              </li>
+                            </ul>
+                        <table class="table table-sm table-borderless table-striped rounded mt-0" style=" margin-top: 5px; color: #e0e0e0;">
+                            <thead class="thead-dark">
+                              <tr class="table-danger border-primary">
+                                <th scope="col">#</th>
+                                <th scope="col">Subject Code</th>
+                                <th scope="col">Subject</th>
+                                <th scope="col">Grade</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark 1st</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                </div>
+                  <a class='btn btn-light float-right m-2 text-primary' id="download" href="#"> 
+                    <i class="far fa-file-alt"></i> 
+                    <span class="text" >Download result</span>
+                  </a>
+                  <a class='btn btn-light float-right m-2 text-info' id="download" href="#"> 
+                      <i class="fas fa-redo"></i>
+                      <span class="text" >Refresh page</span>
+                    </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm ml-2 h-100">
+          
+          <a class="btn alert-primary ml-3 mb-0  w-100 text" data-toggle="collapse" href="#backlogs" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fas fa-book-dead fa-md"></i> Backlog Subjects</a>
+          <div class="collapse" id="backlogs" >
+            <div class="alert alert-primary m-3 w-100" role="alert">
+              <h4 class="alert-heading">Well done!</h4>
+              <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+          </div>
+          <a class="btn alert-danger m-3 w-100 text"  data-toggle="collapse" href="#fastrack" role="button" aria-expanded="false" aria-controls="multiCollapseExample2"><i class="fas fa-book fa-md"></i> Fastrack Subjects</a>
+          <div class="collapse" id="fastrack">
+            <div class="alert alert-danger ml-3 w-100" role="alert">
+              <h4 class="alert-heading">Well done!</h4>
+              <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+          </div>
+
+          <h4 class="text ml-4 mt-2 text-primary"><i class="far fa-bell"></i> Notifications <span class="badge badge-primary">2</span></h4>
+          <hr class="m-3"/>
+
+          <div class="alert alert-secondary ml-3 w-100 text" role="alert">
+            <h5 class="alert-heading">Revaluation <span class="badge badge-success">New</span></h5>
+            <p><strong>Revaluation link open!</strong> You can apply by heading to the link below. Other details can be found in the link.</p>
+            <hr/>
+            <a class="mb-0" href="#"><i class="far fa-hand-pointer"></i> Click to apply for reval</a>
+          </div>
+
+          <div class="alert alert-info ml-3 w-100 text" role="alert">
+            <h5 class="alert-heading">Photocopy <span class="badge badge-danger">Last date</span></h5>
+            <p><strong>Photocopy link open!</strong> You can apply by heading to the link below. Other details can be found in the link.</p>
+            <hr/>
+            <a class="mb-0" href="#"><i class="far fa-hand-pointer"></i> Click to apply for photocopy</a>
+          </div>
+
+              
+          
+          <!-- <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Secondary card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card  mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Success card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,108 @@
+// Variable Overrides
+
+// $body-bg: #ffffff;
+
+$theme-colors: (
+    "primary": #007bff !important,
+);
+
+.jumbotron{
+    margin-top: 10px;
+    background-color: #ffffff !important;
+    border: 1px solid #428dd3;
+}
+
+// @font-face {
+//     font-family: ;
+//     src: url(sansation_light.woff);
+//   }
+
+.text {
+    font-family: 'Roboto Mono', monospace;
+    
+// font-family: 'Concert One', cursive;
+}
+
+.head {
+    font-weight: 550;
+    font-size: 25px;
+}
+
+.sub {
+    font-weight: 100;
+    //font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    color: #747373;
+}
+
+
+#current {
+    width: 100%;
+    height: 500px;
+}
+
+.icon {
+    position: relative;
+    /* Adjust these values accordingly */
+    top: 5px;
+    left: 5px;
+  }
+
+  .currentSem {
+    background-image: linear-gradient(to right, rgb(96, 235, 240) , rgb(240, 148, 202));
+    color: black;
+  }
+
+.alert {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+}
+
+#download span {
+    max-width: 0;
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 1s;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  #download:hover span {
+    max-width: 10rem;
+  }
+
+  .launch-left {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 10; /* Maximum width */
+ /* Center it */
+  }
+  
+.launch-text {
+    position: absolute; /* Position the background text */
+    left: 0;
+    top: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+    z-index: 15;
+  }
+
+
+
+//   .tab-pane.active {
+//     animation: slide-left 1s ease-in-out;
+// }
+
+// @keyframes slide-left {
+//     0% { opacity: 0; transform: translateX(100%); }
+//     25% { opacity: 0; transform: translateX(25%); }
+//     100% { opacity: 1; transform: translateX(0); }
+// }
+
+//Bootstrap Sass files
+@import "node_modules/bootstrap/scss/bootstrap";
