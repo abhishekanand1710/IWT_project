@@ -13,40 +13,16 @@
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <script type='text/javascript'>
-        function validateFields(elem1,elem2){
-            var usn=/^[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]$/;
-            var psw=/^[0-9][0-9][/][0-9][0-9][/][0-9][0-9][0-9][0-9]$/;
-            if(!elem1.value.match(usn)&&!elem2.value.match(psw)){
-                alert("You may have entered invalid USN and invalid Password");
-                return false;
-            }
-            else if(!elem1.value.match(usn)&&elem2.value.match(psw)){
-                alert("You may have entered invalid USN or invalid Password");
-                return false;
-            }
-            else if(elem1.value.match(usn)&&!elem2.value.match(psw)){
-                alert("You may have entered invalid USN or invalid Password");
-                return false;
-            }
-            else if(elem1.value.match(usn)&&elem2.value.match(psw)){
-                window.location.href = './home.html';
-            }
-        }
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
     </head>
     <body style="background:#f9faf3;  overflow-y: hidden; overflow: hidden;">
         
-        <!-- <form style="text-align:center;" action="" onsubmit="validateFields(usn,psw);return false;">
-            USN:<input type="text" id="usn"/><BR/><br/>
-            Password:<input type="password" id="psw"><BR/><br/>
-            <input type="submit" value="Login">
-        </form> -->
-        <!-- <div class="card mb-3 mx-auto rounded mt-lg-5" style="max-width: 720px;"> -->
             <div class="row no-gutters" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
               <div class="col-md-8" style="text-align:center;">
                     <!-- <h3 style="text-align:center; vertical-align: middle;" class="text-light">Welcome to College Result Portal</h3> -->
                         <img src="/images/trees.jpg" alt="Notebook" style="width:100%; height:100%;" class="p-0"/>
+                        <img style="position:absolute; left:50%; top:40%; transform: translate(-50%, -40%); width: 50px; height: 50px;" src="assets/notepad.svg"/>
                         <h2 class=" text text-white" style="position:absolute; left:50%; top:50%; transform: translate(-50%, -50%);">College result portal</h2>
                       
               </div>
@@ -55,7 +31,7 @@
                   <h5 class=" text text-primary">Login</h5>
                   <p class="text">Enter your USN and date of birth to access the result portal.</p>
                   <p><small class="text-muted">Last updated 3 mins ago</small></p>
-                  <form  action="" onsubmit="validateFields(usn,psw);return false;" class="text">
+                  <!-- <form action="" class="text"> -->
                     <div class="form-group">
                         <label for="usn" >USN</label>
                         <input type="text" class="form-control" id="usn" aria-describedby="emailHelp" placeholder="Enter your USN">
@@ -69,12 +45,15 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button type="submit" class="btn btn-primary  m-3">Submit</button>
-                </form>
+                    <button type="submit" class="btn btn-primary  m-3" id="login">Submit</button>
+                <!-- </form> -->
                 </div>
               </div>
             </div>
-          
+
+
+            <script src="./fire.js"></script>
+            <script src="./index.js"></script>
         
     </body>
 </html>
