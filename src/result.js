@@ -2,20 +2,27 @@ var firestore = firebase.firestore();
 
 var rsem1;
 var sSem1;
+var blogs;
+var fasts;
 var r = false;
 var s = false;
 
 const name = document.querySelector('#name');
 const usn = document.querySelector('#usn');
 var table = document.getElementById("table6EXT");
-
+var namev = localStorage.getItem("name");
+var usnv = localStorage.getItem("usn");
 
 function getResult(){
     rsem1 = [];
     sSem1 = [];
+    blogs = [];
+    fasts = [];
     table.innerHTML = null;
-    name.innerHTML = localStorage.getItem("name");
-    usn.innerHTML = "USN:- " + localStorage.getItem("usn");
+    name.innerHTML = namev;
+    usn.innerHTML = "USN:- " + usnv;
+    getBacklogs();
+    getFasttracks();
     getSemResult();
     getSCode();
     if(r && s){
@@ -58,6 +65,8 @@ function getSCode(){
             console.log(sSem1);
             if(sSem1.length === 8 && rsem1.length === 8){
                 insertInTable();
+                addLists(blogs, 'backlist', 'primary', 'back');
+                addLists(fasts, 'fastlist', 'success', 'fast');
             }
         });
     })
@@ -66,6 +75,63 @@ function getSCode(){
     });
 }
 
+function getBacklogs() {
+    console.log("backlogs");
+    firestore.collection("Students/"+usnv+"/Backlogs")
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            blogs.push({"code":doc.data().code, "sub":doc.data().name});
+            console.log(blogs);
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+
+    console.log("function called2");
+}
+
+function getFasttracks() {
+    console.log("fasttracks");
+    firestore.collection("Students/"+usnv+"/Fastrack")
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            fasts.push({"code":doc.data().code, "sub":doc.data().name});
+            console.log(fasts);
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+
+    console.log("function called2");
+}
+
+///////////////////////////////////////////
+function addElement(parentId, elementTag, elementId, html) {
+    // Adds an element to the document
+    var p = document.getElementById(parentId);
+    var newElement = document.createElement(elementTag);
+    newElement.setAttribute('id', elementId);
+    newElement.innerHTML = html;
+    p.appendChild(newElement);
+    
+}
+function addLists(list, parentid, color, eid) {
+    console.log("New note");
+    for(i=0; i<list.length; i++){
+        // increment fileId to get a unique ID for the new element
+        var html = '<div class="list-group-item list-group-item-'+ color + ' d-flex w-100 justify-content-between">'+
+        '<h6 class="m-1">'+list[i].code.toUpperCase()+'</h6><text>'+ list[i].sub+'</text></div>';
+        addElement(parentid, 'div', eid + i, html);
+        console.log("added");
+    }
+}
+//////////////////////////////////////////////////
 
 const cgpa = document.querySelector('#cgpa');
 
