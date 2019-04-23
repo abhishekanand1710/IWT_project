@@ -33,6 +33,10 @@
   font-family: 'Roboto Mono', monospace;
   font-size: 13px; }
 
+.bw {
+  background: #f9faf3;
+}
+
 #download span {
   max-width: 0;
   -webkit-transition: max-width 0.5s;

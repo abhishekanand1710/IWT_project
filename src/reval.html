@@ -1,29 +1,342 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <title>Revaluation</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <link href="https://fonts.googleapis.com/css?family=Exo+2|Josefin+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Concert+One|Space+Mono|Nanum+Gothic+Coding" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <script type='text/javascript'>
-        </script>
-    </head>
-    <body>
-        <h1>Reval page</h1>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Space+Mono|Nanum+Gothic+Coding" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
-        <script defer src="./fire.js"></script>
-    </body>
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="form-validation.css" rel="stylesheet"> -->
+    
+  </head>
+
+  <body class="bw" style=" height: 100%">
+    <nav class="navbar navbar-expand-lg alert-success rounded fixed-top border-primary " >
+        <h4 class="text-uppercase text text-center mr-auto text-primary" href="#">Revaluation Application</h4>
+
+        <button class="btn btn-outline-primary my-2 my-sm-0 align-self-end" type="submit">Logout</button>
+      </nav>
+
+
+    <div class="container-fluid ml-2 mt-5 p-5 text" style="max-width: 1550px;">
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4 " >
+            
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Selected Subjects</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed border-primary text">
+              <div>
+                <h6 class="my-0">Maths</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">CS12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed border-primary text">
+              <div>
+                <h6 class="my-0">Software Engineering</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">CS56</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between border-primary bg-dark text">
+              <span class="text-light text">Total (INR)</span>
+              <strong class="text-light text">1200/-</strong>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-md-8 order-md-1 " >
+                <text  class="text" style="font-size:20px;">Select the courses you want to apply for revaluation</text>
+                <hr/>
+                <table class="table table-striped">
+                        <thead class="thead-dark rounded">
+                          <tr>
+                            <th colspan="3">Course </th>
+                            <th rowspan="2"> Semester </th>
+                            <th rowspan="2"> Credits </th>
+                            <th rowspan="2"> Grade </th>
+                            <th rowspan="2"> Select </th>
+                          </tr>
+                          <tr>
+                            <th>Code </th>
+                            <th colspan="2"> Name </th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>CS061 </td>
+                            <td colspan="2">IWT </td>
+                            <td> 6</td>
+                            <td> 4.0 </td>
+                            <td> S+ </td>
+                            <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                          <tr>
+                            <td>CS062 </td>
+                            <td colspan="2">CD </td>
+                            <td> 6</td>
+                            <td> 4.0</td>
+                            <td> S</td>
+                          <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                          <tr>
+                            <td>CS063</td>
+                            <td colspan="2">CG </td>
+                            <td> 6</td>
+                            <td> 4.0 </td>
+                            <td> A </td>
+                            <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                          <tr>
+                            <td>CS064 </td>
+                            <td colspan="2">CBD </td>
+                            <td> 6</td>
+                            <td> 3.0 </td>
+                            <td> S </td>
+                           <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                           <tr>
+                            <td>CS065 </td>
+                            <td colspan="2">ST</td>
+                            <td> 6</td>
+                            <td> 3.0 </td>
+                            <td> S </td>
+                            <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                           <tr>
+                            <td>CS066 </td>
+                            <td colspan="2">WSN</td>
+                            <td> 6</td>
+                            <td> 3.0 </td>
+                            <td> S </td>
+                            <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                           <tr>
+                            <td>CSL67 </td>
+                            <td colspan="2">IWT LAB</td>
+                            <td> 6</td>
+                            <td> 2.0 </td>
+                            <td> B </td>
+                            <td><input type="checkbox" value={{this}}></td>
+                          </tr>
+                          <tr>
+                            <td>CSL68 </td>
+                            <td colspan="2">CG LAB</td>
+                            <td>6</td>
+                            <td> 2.0 </td>
+                            <td> A </td>
+                            <td><input type="checkbox" value={{this}}></td>
+                          </tr> 
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="8" class="footer text text-danger">**Revaluation price per subject is INR 600/-</td>
+                          </tr>
+                          <tr>
+                            
+                          </tr>
+                      </table>
+
+        <hr/>
+        <br/>
+        <br/>
+        <br/>
+                    
+          <h4 class="mb-3">Billing address</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <select class="custom-select d-block w-100" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>India</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">State</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                  <option value="">Choose...</option>
+                  <option>Karnataka</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Pin code</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                  Pin code code required.
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="save-info">
+              <label class="custom-control-label" for="save-info">Save this information for next time</label>
+            </div>
+            <hr class="mb-4">
+
+            <h4 class="mb-3">Payment</h4>
+
+            <div class="d-block my-3">
+              <storng class="text-primary">Pay through Debit card</storng>
+
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                  Name on card is required
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Debit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                  Debit card number is required
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <div class="invalid-feedback">
+                  Expiration date required
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                <div class="invalid-feedback">
+                  Security code required
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Make payment</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
 </html>
-
-
-<!-- style="background: url('/images/black_spiral.jpg') no-repeat scroll center center / 100% ;" -->
