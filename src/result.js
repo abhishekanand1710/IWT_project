@@ -2,6 +2,9 @@ var firestore = firebase.firestore();
 
 var rsem1;
 var sSem1;
+var sSem2;
+var sSem3;
+var sSem4;
 var blogs;
 var fasts;
 var r = false;
@@ -10,33 +13,36 @@ var s = false;
 const name = document.querySelector('#name');
 const usn = document.querySelector('#usn');
 var table = document.getElementById("table6EXT");
+
+
 var namev = localStorage.getItem("name");
 var usnv = localStorage.getItem("usn");
 
 function getResult(){
     rsem1 = [];
     sSem1 = [];
+    sSem2 = [];
+    sSem3 = [];
+    sSem4 = [];
     blogs = [];
     fasts = [];
     table.innerHTML = null;
+
     name.innerHTML = namev;
     usn.innerHTML = "USN:- " + usnv;
     getBacklogs();
     getFasttracks();
     getSemResult();
     getSCode();
-    if(r && s){
-        insertInTable();
-    }
+
 }
 
 
 
 function getSemResult() {
-    // var usn=/^[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9]$/;
-    // var psw=/^[0-9][0-9][/][0-9][0-9][/][0-9][0-9][0-9][0-9]$/;
+
     console.log("function called");
-    firestore.collection("Results/CS/Results/1DS16CS005/sem1")
+    firestore.collection("Results/CS/Results/"+usnv+"/sem1")
     .get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
